@@ -1,12 +1,14 @@
-import './styles/main.css';
-import Navbar from './components/navbar/Navbar';
-import ProjectAdd from './pages/ProjectAdd';
-import Footer from './components/footer/Footer';
-import Contacts from './pages/Contacts';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './utils/scrollToTop';
+import "./styles/main.css";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import ProjectAdd from "./pages/ProjectAdd";
+import Contacts from "./pages/Contacts";
+import ScrollToTop from "./utils/scrollToTop";
 
 
 
@@ -17,11 +19,11 @@ function App() {
           <ScrollToTop />
 		        <Navbar />
               <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/projects' element={<Projects />} />
-              <Route path='/contacts' element={<Contacts />} />
-              <Route path='/projectAdd' element={<ProjectAdd />} />
-          </Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/project/:id" element={<ProjectAdd />} />
+                <Route path="/contacts" element={<Contacts />} />
+              </Routes>
           <Footer />
         </Router>
 	  </div>
