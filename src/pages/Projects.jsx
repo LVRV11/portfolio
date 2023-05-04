@@ -1,8 +1,7 @@
-import Project from '../components/project/Project'
-import { projects } from '../helpers/ProjectList'
+import Project from '../components/project/Project';
+import {projects} from "../helpers/projectsList"
 
-
-const Projects = () => { 
+const Projects = () => {
 	return (
 		<main className="section">
 			<div className="container">
